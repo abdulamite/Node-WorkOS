@@ -84,14 +84,17 @@ router.get("/callback", async (req, res) => {
 });
 
 router.get("/logout", async (req, res) => {
-    try {
-      req.session.destroy();
-      res.redirect("/");
-    } catch (error) {
-      res.render("error.ejs", { error: error });
-    }
-  });
-  
+  try {
+    session.fullName = null;
+    session.profile = null;
+    session.isloggedin = null;
+
+    res.redirect("/");
+  } catch (error) {
+    res.render("error.ejs", { error: error });
+  }
+});
+
 router.get("/users", async (req, res) => {
   try {
     if (session.isloggedin) {
