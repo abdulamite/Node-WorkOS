@@ -20,7 +20,7 @@ const workos = new WorkOS(process.env.WORKOS_API_KEY);
 const clientID = process.env.WORKOS_CLIENT_ID;
 const organizationID = process.env.WORKOS_ORG_ID;
 const directoryID = process.env.WORKOS_DIRECTORY_ID;
-const redirectURI = "http://localhost:3000/callback";
+const redirectURI = "https://workos-node.onrender.com/callback";
 
 router.get("/", (req, res) => {
   if (session.isloggedin) {
