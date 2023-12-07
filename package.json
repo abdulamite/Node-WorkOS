@@ -4,7 +4,8 @@
   "description": "A simple application to showcase workOS SSO and directory sync",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
   },
   "author": "abdulamite",
   "license": "ISC",

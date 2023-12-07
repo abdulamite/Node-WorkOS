@@ -98,6 +98,7 @@ router.get("/logout", async (req, res) => {
 router.get("/users", async (req, res) => {
   try {
     if (session.isloggedin) {
+
       const usersFromDirectory = await workos.directorySync.listUsers({
         directory: directoryID,
       });
