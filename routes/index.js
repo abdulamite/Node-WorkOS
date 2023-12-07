@@ -72,7 +72,8 @@ router.get("/callback", async (req, res) => {
     });
     const json_profile = JSON.stringify(profile, null, 4);
 
-    session.fullName = profile.profile.firstName + " " + profile.profile.lastName;
+    session.fullName =
+      profile.profile.firstName + " " + profile.profile.lastName;
     session.profile = json_profile;
     session.isloggedin = true;
 
@@ -83,17 +84,14 @@ router.get("/callback", async (req, res) => {
 });
 
 router.get("/logout", async (req, res) => {
-  try {
-    session.first_name = null;
-    session.profile = null;
-    session.isloggedin = null;
-
-    res.redirect("/");
-  } catch (error) {
-    res.render("error.ejs", { error: error });
-  }
-});
-
+    try {
+      req.session.destroy();
+      res.redirect("/");
+    } catch (error) {
+      res.render("error.ejs", { error: error });
+    }
+  });
+  
 router.get("/users", async (req, res) => {
   try {
     if (session.isloggedin) {
