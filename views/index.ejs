@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../public/stylesheets/style.css" />
+    <style>
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <img class="logo-login" src="../public/images/logo-no-background.png" alt="DevCycle Logo" />
+
+        <div class="login-card">
+            <form method="POST" action="/login">
+                <div>
+                    <span>Log in with SSO</span>
+                </div>
+                <hr class="separator" />
+                <button id="SAML" name="login_method" value="saml" class="action-button sso-button">
+                    <span>OKTA Login</span>
+                </button>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

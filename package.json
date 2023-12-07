@@ -1,0 +1,19 @@
+{
+  "name": "workos",
+  "version": "1.0.0",
+  "description": "A simple application to showcase workOS SSO and directory sync",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "abdulamite",
+  "license": "ISC",
+  "dependencies": {
+    "@workos-inc/node": "^4.0.0",
+    "dotenv": "^16.3.1",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "morgan": "^1.10.0"
+  }
+}

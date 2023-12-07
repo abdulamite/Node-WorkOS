@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../public/stylesheets/style.css" />
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div class="logged-in-nav">
+        <div class="flex">
+            <div>
+                <a href="/"><img class="logo-nav" src="../public/images/logo-no-background.png" alt="DevCycle logo" /></a>
+            </div>
+        </div>
+        <div class="flex">
+            <a href="/users">
+                <button class="button nav-item">Users</button>
+            </a>
+        </div>
+    </div>
+    <div class="logged-in-div">
+        <div class="profile-card">
+            <div class="flex space-between">
+                <div>
+                    <p class="profile-title">Welcome <%= fullName %>!</p>
+                </div>
+            </div>
+            <div>
+                <pre>
+                    <%= profile %>
+                </pre>
+            </div>
+            <div>
+                <a href="/logout" class="action-button">Log Out</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

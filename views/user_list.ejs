@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../public/stylesheets/style.css" />
+</head>
+
+<body>
+    <div class="logged-in-nav">
+        <div class="flex">
+            <div>
+                <a href="/"><img class="logo-nav" src="../public/images/logo-no-background.png" alt="DevCycle logo" /></a>
+            </div>
+        </div>
+        <div class="flex">
+            <a href="/users">
+                <button class="button nav-item">Users</button>
+            </a>
+        </div>
+    </div>
+    <div class="users-list">
+        <div class="profile-card">
+            <div class="flex space-between">
+                <div>
+                    <p class="profile-title">Users</p>
+                </div>
+            </div>
+            <div>
+                <% if (users.length > 0) { %>
+                    <table class="users-table">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% users.forEach(function(user) { %>
+                                <tr>
+                                    <td><%= user.rawAttributes.displayName %></td>
+                                    <td><%= user.rawAttributes.emails[0].value %></td>
+                                    <td><%= user.state %></td>
+                                </tr>
+                            <% }); %>
+                        </tbody>
+                    </table>
+                <% } else { %>
+                    <p>No users found.</p>
+                <% } %>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
